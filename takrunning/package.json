@@ -1,0 +1,12 @@
+{
+  "name": "takrunning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "one.js",
+  "scripts": {
+    "run-both": "node one.js && node two.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
