@@ -1,0 +1,7 @@
+{
+  "tasks": {
+    "run-one": "node one.js",
+    "run-two": "deno run two.js",
+    "run-both": "deno run one.js && deno run two.js"
+  }
+}
