@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The Main Page</h1>
+    <form action="/submitform1" method="post" enctype="multipart/form-data">
+        <input type="text" name="cheese">
+        <input type="file" name="files" multiple>
+        <button>Upload</button>
+    </form>
+
+    <form id="form2">
+        <input type="text" name="cheese">
+        <input type="file" name="files" multiple>
+        <button>Upload</button>
+    </form>
+
+    <script>
+        const form = document.querySelector("#form2")
+
+        form.addEventListener("submit", async (event) => {
+            const formData = new FormData(event.target)
+
+            await fetch("/submitform1", {
+                method: "post",
+                body: formData
+            })
+        })
+    </script>
+</body>
+</html>
