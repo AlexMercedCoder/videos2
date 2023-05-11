@@ -1,0 +1,81 @@
+* {
+    outline: 3px solid gold;
+}
+
+.logobar {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto;
+}
+
+.logobar .left img {
+    height:50px;
+}
+
+.logobar .left {
+    display: flex;
+}
+
+.logobar .left .form {
+    margin: 10px;
+    display: flex;
+}
+
+.logobar .left .form input {
+    padding: 8px;
+}
+
+.logobar .left .form input[type="text"] {
+    width: 400px;
+    height: 20px;
+
+}
+
+.logobar .left .form input[type="submit"], .logobar .right button {
+    padding: 5px;
+    border: none;
+    font-size: 1.2em;
+    background-color: #2876bd;
+    color:aliceblue;
+    transition: color .3s, background-color .3s
+}
+
+.logobar .left .form input[type="submit"]:hover, .logobar .right button:hover {
+    color: #2876bd;
+    background-color: aliceblue;
+}
+
+.logobar .right {
+    display: flex;
+    align-items: center;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto;
+    background-color: lightgray;
+    padding: 8px;
+}
+
+.navbar .left {
+    display: flex;
+}
+
+.navbar .left .menuitem {
+    margin: 4px 10px;
+    font-size: 1.1em;
+    color:#2876bd;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform:uppercase;
+    transition: color .3s, background-color .3s;
+
+}
+
+.navbar .left .menuitem:hover {
+    background-color: #2876bd;
+    color: aliceblue;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" name="text"/>
+        <button id="down">Download File</button>
+    </div>
+    <div>
+        <label>
+            Choose File
+            <input type="file" name="file" multiple>
+        </label>
+        
+        <button id="up">Upload File</button>
+        <div id="list">
+
+        </div>
+    </div>
+    
+
+
+    <script>
+        const text = document.querySelector("input[type='text']")
+        const file = document.querySelector("input[type='file']")
+        const down = document.querySelector("#down")
+        const up = document.querySelector("#up")
+
+        down.addEventListener("click", (event) => {
+            const blob = new Blob([text.value], { type: "text/plain" })
+            console.log(blob)
+            const url = URL.createObjectURL(blob);
+            console.log(url)
+            const link = document.createElement("a")
+            link.download = "result.txt"
+            link.href = url
+            link.click()
+        })
+
+        up.addEventListener("click", (event) => {
+            console.log(file.files)
+            
+            for (let f of file.files){
+                const reader = new FileReader()
+                reader.readAsText(f)
+                reader.addEventListener("load", (event) => {
+                console.log(event.target.result)
+                })
+            }
+            
+           
+        })
+
+        file.addEventListener("input", (event) => {
+            const list = document.querySelector("#list")
+            list.innerHTML = ""
+
+            for (let f of file.files){
+                const p = document.createElement("p")
+                p.innerText = f.name
+                list.append(p)
+            }
+        })
+
+
+
+
+    </script>
+    <style>
+        input, button, label {
+            margin: 10px;
+            padding: 6px;
+            background-color: brown;
+            color: white;
+            border: none;
+            border-radius: 30px;
+
+        }
+
+        input[type='file'] {
+            display: none;
+        }
+
+    
+    </style>
+    
+</body>
+</html>

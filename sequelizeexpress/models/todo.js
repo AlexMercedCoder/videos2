@@ -11,10 +11,10 @@ const Todo = connection.define("Todo", {
   },
 });
 
-async function migrate_todo(){
-    await Todo.sync({ alter: true })
+async function migrate_todo() {
+  await Todo.sync({ alter: true });
 }
 
-migrate_todo()
+migrate_todo();
 
-module.exports = Todo
+module.exports = Todo;
