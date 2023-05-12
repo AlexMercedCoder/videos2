@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #modalBackdrop {
+            background-color: black;
+            width: 100vw;
+            height: 100vh;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #modalContent {
+            background-color: white;
+            padding: 10px;
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+
+    
+
+    
+    <button>
+        Open
+    </button>
+    <div id="modalBackdrop">
+        <div id="modalContent">
+            <h1>Hello World</h1>
+            <button>
+                Close
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.querySelector("#modalBackdrop")
+
+        const open = () => modal.style.display = 'flex'
+        const close = () => modal.style.display = 'none'
+
+        const openBtn = document.querySelector("body > button")
+        const closeBtn = document.querySelector("#modalContent > button")
+
+        console.log(openBtn, closeBtn)
+
+        openBtn.addEventListener("click", () => open())
+        closeBtn.addEventListener("click", () => close())
+    </script>
+    
+</body>
+</html>
