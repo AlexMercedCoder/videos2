@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Other Page</h1>
+    <h2></h2>
+    <script>
+        const url = new URL(window.location.href)
+        console.log(url.searchParams.get("word"))
+
+        const obj = JSON.parse(url.searchParams.get("alex"))
+        console.log(obj)
+        
+        const h2 = document.querySelector("h2")
+        h2.innerText = `Hello ${url.searchParams.get("word")}`
+    </script>
+</body>
+</html>

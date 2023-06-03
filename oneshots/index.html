@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button>Take me to Other Page</button>
+    <script>
+        // selecting the button
+        const button = document.querySelector("button")
+        // adding an event to the button
+        button.addEventListener("click", () => {
+            // selecting the input
+            const input = document.querySelector("input")
+            // getting the inputs value
+            const inputValue = input.value
+            console.log(inputValue)
+            // send user to other page
+            // ?key1=value1&key2=value2
+            const obj = {name: "Alex Merced", age: 37}
+            window.location.href = `index2.html?word=${inputValue}&bread=gouda&alex=${JSON.stringify(obj)}`
+        })
+        
+
+    </script>
+    
+</body>
+</html>
