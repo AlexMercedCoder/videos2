@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("head.ejs") %>
+<body>
+    <h1 class="<%= h1class %>"><%= test %></h1>
+    <% if( 5 > 3){ %>
+
+        <h2><%= 5 * 5  %></h2>
+
+    <% } %>
+
+    <%= cheese %>
+
+    <% for(let item of arr){ %>
+
+        <h3><%= item %></h3>
+
+    <% } %>
+
+    <%- include("partial.ejs") %>
+    
+</body>
+</html>
