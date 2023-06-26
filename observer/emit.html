@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>Click</button>
+    <div>Bob</div>
+    <script>
+      class Emitter {
+        constructor() {
+          this.events = {};
+        }
+
+        subscribe({ name, callback }) {
+          if (!this.events[name]) {
+            this.events[name] = [];
+          }
+          this.events[name].push(callback);
+          const index = this.events[name].length - 1;
+          return {
+            unsubscribe: () => {
+              this.events[name].splice(index, 1);
+            },
+          };
+        }
+
+        emit({ name, data }) {
+          if (this.events[name]) {
+            this.events[name].forEach((callback) => {
+              callback(data);
+            });
+          }
+        }
+      }
+
+      const events = new Emitter();
+
+      events.subscribe({
+        name: "click",
+        callback: (data) => {
+          console.log("click", data);
+        },
+      });
+
+      events.subscribe({
+        name: "bob",
+        callback: (data) => {
+          console.log("bob", data);
+        },
+      });
+
+      const button = document.querySelector("button");
+      button.addEventListener("click", () => {
+        events.emit({ name: "click", data: {name: "Hello"} });
+      });
+
+      const bob = document.querySelector("div");
+        bob.addEventListener("click", () => {
+            events.emit({ name: "bob", data: {name: "Bob"} });
+        });
+    </script>
+  </body>
+</html>

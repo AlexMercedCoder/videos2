@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div></div>
+    <main></main>
+    <button>Click</button>
+
+    <script>
+      class Observer {
+        constructor(initialData = {}) {
+          this.data = initialData;
+          this.subscribers = [];
+        }
+
+        subscribe(subscriber) {
+          this.subscribers.push({
+            callback: subscriber.callback,
+            deps: subscriber.deps,
+          });
+          subscriber.callback(this.data);
+        }
+
+        update(cb) {
+          const data = cb(this.data);
+          this.data = { ...this.data, ...data };
+          const keys = Object.keys(data);
+          const subscribersToUpdate = this.subscribers.filter((subscriber) => {
+            return subscriber.deps.some((dep) => keys.includes(dep));
+          });
+          subscribersToUpdate.forEach((subscriber) => subscriber.callback(this.data));
+        }
+      }
+
+      const observer = new Observer({ name: "John", age: 30 });
+
+      observer.subscribe({callback: (data) => {
+        console.log(1);
+        const div = document.querySelector("div");
+        div.innerHTML = `<p>${data.name}</p><p>${data.age}</p>`;
+      }, deps: ["name", "age"]});
+
+      observer.subscribe({ callback: (data) => {
+        console.log(2);
+        const div = document.querySelector("main");
+        div.innerHTML = `<p>${data.name}</p>`;
+      }, deps: ["name"]});
+
+      document.querySelector("button").addEventListener("click", () => {
+        observer.update((data) => {
+          return {age: data.age + 1 };
+        });
+      });
+    </script>
+  </body>
+</html>
