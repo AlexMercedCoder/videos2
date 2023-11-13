@@ -1,0 +1,119 @@
+[
+    {
+      "name": "Barbarian",
+      "description": "A fierce warrior who can enter a battle rage, granting them superhuman strength and resilience.",
+      "abilities": [
+        "Rage",
+        "Unarmored Defense",
+        "Danger Sense",
+        "Reckless Attack",
+        "Brutal Critical",
+        "Path of the Barbarian"
+      ]
+    },
+    {
+      "name": "Bard",
+      "description": "An inspiring magician whose power echoes the music of creation.",
+      "abilities": [
+        "Bardic Inspiration",
+        "Jack of All Trades",
+        "Song of Rest",
+        "Bardic College"
+      ]
+    },
+    {
+      "name": "Cleric",
+      "description": "A priestly champion who wields divine magic in service of a higher power.",
+      "abilities": [
+        "Channel Divinity",
+        "Divine Intervention",
+        "Destroy Undead",
+        "Domain"
+      ]
+    },
+    {
+      "name": "Druid",
+      "description": "A priest of the Old Faith, wielding the powers of nature and adopting animal forms.",
+      "abilities": [
+        "Wild Shape",
+        "Druidic Circle"
+      ]
+    },
+    {
+      "name": "Fighter",
+      "description": "A master of martial combat, skilled with a variety of weapons and armor.",
+      "abilities": [
+        "Action Surge",
+        "Second Wind",
+        "Battle Master",
+        "Eldritch Knight"
+      ]
+    },
+    {
+      "name": "Monk",
+      "description": "A master of unarmed combat, using their ki energy to enhance their abilities.",
+      "abilities": [
+        "Flurry of Blows",
+        "Deflect Missiles",
+        "Patient Defense",
+        "Step of the Wind",
+        "Ki Sense",
+        "Monastic Tradition"
+      ]
+    },
+    {
+      "name": "Paladin",
+      "description": "A holy warrior who fights in the name of their deity.",
+      "abilities": [
+        "Divine Smite",
+        "Lay on Hands",
+        "Aura of Protection",
+        "Oath"
+      ]
+    },
+    {
+      "name": "Ranger",
+      "description": "A skilled hunter and tracker, who can fight with both ranged and melee weapons.",
+      "abilities": [
+        "Favored Enemy",
+        "Natural Explorer",
+        "Fighting Style",
+        "Spellcasting"
+      ]
+    },
+    {
+      "name": "Rogue",
+      "description": "A master of stealth and deception, who is skilled in the use of daggers, bows, and other finesse weapons.",
+      "abilities": [
+        "Sneak Attack",
+        "Cunning Action",
+        "Thieves' Cant",
+        "Archetype"
+      ]
+    },
+    {
+      "name": "Sorcerer",
+      "description": "A natural-born spellcaster who has an innate connection to magic.",
+      "abilities": [
+        "Sorcerous Origin",
+        "Metamagic"
+      ]
+    },
+    {
+      "name": "Warlock",
+      "description": "A spellcaster who has made a pact with a powerful otherworldly being.",
+      "abilities": [
+        "Pact Boon",
+        "Otherworldly Patron"
+      ]
+    },
+    {
+      "name": "Wizard",
+      "description": "A master of arcane magic, who has studied long and hard to learn the secrets of the universe.",
+      "abilities": [
+        "Spellcasting",
+        "Arcane Tradition"
+      ]
+    }
+    ]
+    
