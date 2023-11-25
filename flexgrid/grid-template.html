@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="square one">a</div>
+      <div class="square two">a</div>
+      <div class="square three">a</div>
+      <div class="square four">a</div>
+    </div>
+
+    <style>
+      .container {
+        background-color: blanchedalmond;
+        width: 600px;
+        height: 600px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: [start] 1fr [mid] 1fr [end];
+        grid-template-rows: [start] 1fr [mid] 1fr [end];
+      }
+
+      .square {
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+        color: rgba(255, 255, 255, 0);
+      }
+
+      .one {
+        background-color: aquamarine;
+      }
+
+      .two {
+        background-color: blueviolet;
+      }
+
+      .three {
+        background-color: steelblue;
+      }
+
+      .four {
+        background-color: brown;
+        grid-row: mid/end;
+        grid-column: start/mid;
+      }
+    </style>
+  </body>
+</html>

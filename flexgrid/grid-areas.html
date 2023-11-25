@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="square one">a</div>
+        <div class="square two">a</div>
+        <div class="square three">a</div>
+        <div class="square four">a</div>
+    </div>
+
+    <style>
+        .container {
+            background-color: blanchedalmond;
+            width: 600px;
+            height: 600px;
+            margin: auto;
+            display: grid;
+            grid-template-areas: 
+            "four four two two"
+            "four four two two"
+            "one one three three"
+            "one one three three";
+        }
+
+        .square {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            color: rgba(255,255,255,0);
+        }
+
+        .one {
+            background-color: aquamarine;
+            grid-area: one;
+        }
+
+        .two {
+            background-color: blueviolet;
+            grid-area: two;
+        }
+
+        .three {
+            background-color: steelblue;
+            grid-area: three;
+        }
+
+        .four {
+            background-color: brown;
+            grid-area: four;
+        }
+
+        @media (min-width: 1000px){
+            .container {
+                grid-template-areas: 
+                "one"
+                "three"
+                "four"
+                "two";
+            }
+        }
+    </style>
+    
+</body>
+</html>
