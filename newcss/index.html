@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+    <input type="number">
+    <button>Resize</button>
+    <script>
+        const parent = document.querySelector(".parent")
+        const button = document.querySelector("button")
+        const input = document.querySelector("input")
+
+        button.addEventListener("click", (event) => {
+            console.log("clicked")
+            parent.style.width = `${input.value}px`
+        })
+    </script>
+
+    <style>
+
+        .parent {
+            width: 410px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            container-type: inline-size;
+        }
+
+        .child {
+            width: 100px;
+            height: 100px;
+            margin: 2px;
+            background-color: brown;
+        }
+
+        @container (width < 300px){
+            .child {
+                width:20px;
+                height: 20px;
+            }
+        }
+        
+
+    </style>
+    
+</body>
+</html>
