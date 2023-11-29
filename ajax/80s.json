@@ -1,0 +1,127 @@
+[
+    {
+      "title": "The A-Team",
+      "year": 1983,
+      "genre": ["Action", "Adventure", "Crime"],
+      "creator": "Stephen J. Cannell, Frank Lupo",
+      "cast": [
+        "George Peppard",
+        "Dwight Schultz",
+        "Mr. T",
+        "Dirk Benedict"
+      ],
+      "summary": "A group of Vietnam War veterans, wrongly accused of a crime, becomes a team of mercenaries who help those in need while on the run from the military police."
+    },
+    {
+      "title": "Knight Rider",
+      "year": 1982,
+      "genre": ["Action", "Crime", "Drama"],
+      "creator": "Glen A. Larson",
+      "cast": [
+        "David Hasselhoff",
+        "William Daniels (voice)"
+      ],
+      "summary": "A high-tech car, KITT, and its driver, Michael Knight, fight crime and injustice while battling against evil organizations and villains."
+    },
+    {
+      "title": "The Cosby Show",
+      "year": 1984,
+      "genre": ["Comedy", "Family"],
+      "creator": "Bill Cosby",
+      "cast": [
+        "Bill Cosby",
+        "Phylicia Rashad",
+        "Malcolm-Jamal Warner",
+        "Lisa Bonet"
+      ],
+      "summary": "The Huxtable family, led by Dr. Cliff Huxtable, deals with the ups and downs of family life and parenting."
+    },
+    {
+      "title": "Cheers",
+      "year": 1982,
+      "genre": ["Comedy", "Drama"],
+      "creator": "Glen Charles, Les Charles, James Burrows",
+      "cast": [
+        "Ted Danson",
+        "Shelley Long",
+        "Rhea Perlman",
+        "George Wendt"
+      ],
+      "summary": "The regulars of a Boston bar called Cheers share laughs, love, and life while dealing with their own personal and professional challenges."
+    },
+    {
+      "title": "Miami Vice",
+      "year": 1984,
+      "genre": ["Action", "Crime", "Drama"],
+      "creator": "Anthony Yerkovich",
+      "cast": [
+        "Don Johnson",
+        "Philip Michael Thomas",
+        "Saundra Santiago",
+        "Edward James Olmos"
+      ],
+      "summary": "Two detectives, James 'Sonny' Crockett and Ricardo 'Rico' Tubbs, fight drug trafficking in the glamorous but dangerous world of Miami."
+    },
+    {
+      "title": "Family Ties",
+      "year": 1982,
+      "genre": ["Comedy", "Family"],
+      "creator": "Gary David Goldberg",
+      "cast": [
+        "Michael J. Fox",
+        "Meredith Baxter",
+        "Michael Gross",
+        "Justine Bateman"
+      ],
+      "summary": "A family with liberal parents and a conservative son navigates the challenges of generational differences."
+    },
+    {
+      "title": "Magnum, P.I.",
+      "year": 1980,
+      "genre": ["Action", "Adventure", "Crime"],
+      "creator": "Donald P. Bellisario, Glen A. Larson",
+      "cast": [
+        "Tom Selleck",
+        "John Hillerman",
+        "Roger E. Mosley"
+      ],
+      "summary": "Private investigator Thomas Magnum solves cases in Hawaii while living a laid-back and adventurous lifestyle."
+    },
+    {
+      "title": "Dynasty",
+      "year": 1981,
+      "genre": ["Drama"],
+      "creator": "Richard and Esther Shapiro",
+      "cast": [
+        "John Forsythe",
+        "Linda Evans",
+        "Joan Collins",
+        "Pamela Sue Martin"
+      ],
+      "summary": "The wealthy Carrington family and their rivals engage in power struggles, betrayals, and drama in the world of high society."
+    },
+    {
+      "title": "Dallas",
+      "year": 1978,
+      "genre": ["Drama"],
+      "creator": "David Jacobs",
+      "cast": [
+        "Larry Hagman",
+        "Patrick Duffy",
+        "Linda Gray"
+      ],
+      "summary": "The Ewing family, owners of a large Texas oil company, faces conflicts and rivalries in both business and personal matters."
+    },
+    {
+      "title": "MacGyver",
+      "year": 1985,
+      "genre": ["Action", "Adventure", "Drama"],
+      "creator": "Lee David Zlotoff",
+      "cast": [
+        "Richard Dean Anderson",
+        "Dana Elcar"
+      ],
+      "summary": "Resourceful secret agent Angus MacGyver uses his scientific knowledge to solve problems and combat threats."
+    }
+  ]
+  
