@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const url = "https://cdn.contentful.com/spaces/6dfvmncyipqq/environments/master/entries?access_token=HM2EIEN6ez_fe4zohEkFEv_oHtPfixKmvYKs6Qt4xSs&content_type=todo"
+
+        fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            const items = data.items
+
+            for (let item of items){
+                const body = document.body
+
+                body.innerHTML = `
+                <h1>${item.fields.text}</h1>
+                
+                `
+            }
+        })
+    </script>
+</body>
+</html>

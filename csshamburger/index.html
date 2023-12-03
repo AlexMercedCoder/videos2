@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">My Page</h1>
+      <nav>
+        <div class="hamburger">
+          <label for="hamburg">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </label>
+          <input name="hamburg" type="checkbox" id="hamburg" />
+          <div class="links">
+            <div class="link">Link</div>
+            <div class="link">Link</div>
+            <div class="link">Link</div>
+            <div class="link">Link</div>
+            <div class="link">Link</div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <style>
+      .links {
+        width: 30%;
+        background-color: brown;
+        padding: 4px;
+        color: white;
+        position: fixed;
+        top: 0px;
+        right: -200px;
+        transition: right .6s;
+      }
+
+      .line {
+        width: 20px;
+        border: 2px solid black;
+        margin: 3px;
+      }
+
+      .hamburger {
+        position: fixed;
+        top: 5px;
+        right: 5px;
+      }
+
+      label[for="hamburg"]{
+        z-index: 1;
+        position: absolute;
+        right: 5px;
+      }
+
+      #hamburg {
+        visibility: hidden;
+      }
+
+      #hamburg:checked+div.links {
+        right: 0;
+      }
+
+      @media (min-width:600px){
+        label[for="hamburg"], #hamburg {
+            display: none;
+        }
+
+        .hamburger, .links {
+            position: unset;
+            right: unset;
+            top: unset;
+            width: 100%;
+        }
+
+        .links {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+      }
+    </style>
+  </body>
+</html>

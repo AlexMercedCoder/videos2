@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div></div>
+
+    <script>
+        fetch("https://dummydata.netlify.app/marioness.json")
+        .then(res => {
+            console.log(res)
+            if (res.ok){
+                return res.text()
+            }
+
+            throw new Error(`${res.status} - ${res.statusText}`)
+
+
+        })
+        .then(data => console.log(data))
+        .catch((error) => {
+            document.querySelector("div").innerText = error.message
+
+        })
+    </script>
+    
+</body>
+</html>

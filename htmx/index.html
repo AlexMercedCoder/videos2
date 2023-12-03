@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My HTMX Page</title>
+    <script src="https://unpkg.com/htmx.org@1.9.9"></script>
+</head>
+<body>
+    <header>Trying out HTMX</header>
+    <main>
+        <div id="display"></div>
+    </main>
+    <button hx-get="/hello.html" hx-trigger="click" hx-swap="innerHTML" hx-target="#display">Hello</button>
+    <button hx-get="/goodbye.html" hx-trigger="click" hx-swap="innerHTML" hx-target="#display">goodbye</button>
+
+    <footer>
+
+        
+
+    </footer>
+    <style>
+        div#display {
+            transition: border 2s;
+        }
+
+        .htmx-added, .htmx-settling {
+            border: 5px solid green
+        }
+    </style>
+</body>
+</html>
