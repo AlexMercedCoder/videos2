@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/htmx.org@1.9.9"></script>
+</head>
+<body>
+    <h1>Examples</h1>
+    <div id="display">dfsdfsdfsdf</div>
+    <div>
+        <button 
+        hx-get="/examples/1" 
+        hx-target="#display"
+        hx-trigger="click"
+        hx-select="#cheese p"
+        hx-select-oob="#bread"
+        hx-indicator="#indicator"
+        hx-swap="beforeend swap:1s settle:1s"
+        >Get</button>
+        
+
+    </div>
+    <div id="indicator" class="htmx-indicator">CHEEEEEEEESE</div>
+    
+    <div id="bread">dfsfsfsdf</div>
+    
+
+    <style>
+        .htmx-settling {
+            background-color: yellow;
+        }
+
+        .htmx-swapping {
+            background-color: red;
+        } 
+
+        .htmx-request {
+            opacity: 1;
+        }
+
+    </style>
+    
+</body>
+</html>

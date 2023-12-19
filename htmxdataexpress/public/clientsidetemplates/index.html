@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+    <script src="https://unpkg.com/htmx.org/dist/ext/client-side-templates.js"></script>
+    <script src="https://unpkg.com/mustache@latest"></script>
+  </head>
+  <body>
+    <div id="container" hx-ext="client-side-templates">
+      <div id="display"></div>
+      <button
+        hx-get="/mydata"
+        hx-target="#display"
+        hx-swap="innerHTML"
+        mustache-array-template="template"
+      >
+        Get
+      </button>
+
+      <template id="template">
+        {{#data}}
+
+        <h2>{{name}}</h2>
+        <h3>{{age}}</h3>
+
+        {{/data}}
+      </template>
+    </div>
+  </body>
+</html>
